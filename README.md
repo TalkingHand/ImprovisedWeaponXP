@@ -21,7 +21,7 @@ In vanilla B42, a melee hit gives weapon skill XP only when the weapon has one o
 
 ## Install
 
-- Steam Workshop: (link after upload)
+- Steam Workshop: [Improvised Weapon XP](https://steamcommunity.com/sharedfiles/filedetails/?id=3841038652) (ID `3841038652`). Subscribe, then enable **Improvised Weapon XP** in the mod list.
 - Manual: copy `Contents/mods/ImprovisedWeaponXP` to `%USERPROFILE%\Zomboid\mods\`.
 - Multiplayer: add the mod to the server (XP is granted where vanilla grants it). Multiplayer is not tested.
 - Safe to add to or remove from an existing save.

@@ -1,4 +1,5 @@
 version=1
+id=3841038652
 title=[42.22.2] Improvised Weapon XP
 description=[h1]Improvised Weapon XP[/h1]
 description=In vanilla Build 42, melee weapons with only the [b]Improvised[/b] category (pens, pencils, compass, stones, flint) give Strength and Fitness, but [b]no weapon skill XP[/b]. This mod unlocks it.
