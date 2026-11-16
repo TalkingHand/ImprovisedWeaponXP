@@ -1,0 +1,20 @@
+# ImprovisedWeaponXP: vanilla dependencies (format: _guide/README.md "바닐라 의존 목록")
+# checked: 42.22.2
+#
+# kind	target	note
+
+event	Events.OnWeaponHitXp	(owner, weapon, hitObject, damage, hitCount); registered at file load, server/ImprovisedWeaponXP.lua. Vanilla handler: server/XpSystem/XpUpdate.lua:379
+
+java-call	instanceof(weapon, "HandWeapon")
+java-call	HandWeapon:isRanged() / getType() / getScriptItem() / getSubCategory()	getSubCategory returns "Stab" / "Swinging" / "Spear" / "Firearm" (WeaponSubCategory)
+java-call	Item:containsWeaponCategory(WeaponCategory.X)
+java-call	addXp(character, Perks.X, amount)	global; server-side call syncs to the owning client in MP
+
+data	WeaponCategory.AXE / BLUNT / SPEAR / LONG_BLADE / SMALL_BLADE / SMALL_BLUNT	the six categories vanilla turns into skill XP
+data	Perks.SmallBlade / SmallBlunt / Spear
+data	weapon type "BareHands"	excluded (no unarmed skill in B42)
+assume	thrown bombs, traps, firecrackers are non-ranged HandWeapons with no SubCategory	scripts/generated/items/weapon.txt (PipeBomb*, NoiseTrap*, FlameTrap*, SmokeBomb*, Aerosolbomb*, Firecracker*, Molotov). Excluded because only Stab/Swinging/Spear count as melee
+
+assume	vanilla gives weapon skill XP only for the six categories above	server/XpSystem/XpUpdate.lua:87-105 onWeaponHitXp. If vanilla starts giving XP for Improvised, both would grant (double)
+assume	vanilla amount = damage * 0.9, capped at 3, only when hitCount > 0 and not ranged	XpUpdate.lua:57-60, :87. Copied in M.xpFor
+assume	improvised-only melee weapons in 42.22.2: Pen, BluePen, GreenPen, RedPen, PenFancy, PenMultiColor, PenSpiffo, Pencil, PencilSpiffo, CompassGeometry (Stab) ; Stone2, FlintNodule (Swinging)	scripts/generated/items/weapon.txt. Rule is by category, not by name, so new items follow automatically

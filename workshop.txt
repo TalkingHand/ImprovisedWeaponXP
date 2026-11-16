@@ -1,0 +1,25 @@
+version=1
+title=[42.22.2] Improvised Weapon XP
+description=[h1]Improvised Weapon XP[/h1]
+description=In vanilla Build 42, melee weapons with only the [b]Improvised[/b] category (pens, pencils, compass, stones, flint) give Strength and Fitness, but [b]no weapon skill XP[/b]. This mod unlocks it.
+description=
+description=[list]
+description=[*][b]Stabbing[/b] (pens, pencils, compass) → Short Blade
+description=[*][b]Swinging[/b] (stone, flint nodule) → Short Blunt
+description=[*]Same amount as vanilla weapons: damage × 0.9 per hit, max 3 (before XP multipliers)
+description=[*]Weapons that already train a skill are not touched - no double XP
+description=[*]Works by category, so modded weapons without a skill category follow the same rule
+description=[*]Only XP changes; damage, crits and hit chance stay vanilla
+description=[/list]
+description=
+description=[h2]Compatibility[/h2]
+description=Adds an OnWeaponHitXp handler; no vanilla file replaced. Safe to add to or remove from existing saves. Multiplayer: add to the server; not tested in multiplayer.
+description=
+description=[h2]한국어[/h2]
+description=바닐라에서 숙련도가 오르지 않는 즉석 무기(펜·연필·컴퍼스·돌멩이·부싯돌)도 무기 숙련도가 오르게 합니다. 찌르기 무기는 단검, 휘두르기 무기는 단둔기 숙련도가 오르고, 양은 바닐라 무기와 같습니다(데미지 × 0.9, 최대 3). 원래 숙련도가 오르는 무기는 건드리지 않습니다. 멀티는 미검증입니다.
+description=
+description=Source: https://github.com/TalkingHand/ImprovisedWeaponXP
+description=
+description=[url=https://ko-fi.com/talkinghands2285][img]https://raw.githubusercontent.com/TalkingHand/ImprovisedWeaponXP/main/art/kofi_button.png[/img][/url]
+tags=Build 42;Misc
+visibility=public

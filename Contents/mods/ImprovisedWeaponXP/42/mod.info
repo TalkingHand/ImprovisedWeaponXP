@@ -1,0 +1,8 @@
+name=Improvised Weapon XP
+id=ImprovisedWeaponXP
+description=Melee weapons that give no weapon skill XP in vanilla (pens, pencils, compass, stones, flint) now train a weapon skill: stabbing ones Short Blade, swinging ones Short Blunt.
+poster=poster.png
+author=TalkingHand
+url=https://github.com/TalkingHand/ImprovisedWeaponXP
+modversion=1.0.0
+versionMin=42.0
